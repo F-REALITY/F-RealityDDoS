@@ -157,7 +157,7 @@ class MainWindow(QMainWindow):
         self.image_label.setStyleSheet("background-color: #000000;")
         layout.addWidget(self.image_label)
 
-        image_url = "https://static.ts.360.com/blog/wp-content/uploads/2016/08/160822-Post-fsociety-1.png"
+        image_url = "https://i.postimg.cc/vmJvZtgj/Copia-de-jester-removebg-preview.png"
         self.load_image(image_url)
 
         slogan_label = QLabel("WE ARE FINALLY FREE. WE ARE FINALLY AWARE.")
@@ -165,7 +165,7 @@ class MainWindow(QMainWindow):
         slogan_label.setStyleSheet("color: #ff0000; font-size: 14px; font-weight: bold;")
         layout.addWidget(slogan_label)
 
-        title_label = QLabel("FSOCIETY")
+        title_label = QLabel("F-Reality")
         title_label.setAlignment(Qt.AlignCenter)
         title_label.setStyleSheet("color: white; font-size: 24px; font-weight: bold;")
         layout.addWidget(title_label)
@@ -207,7 +207,7 @@ class MainWindow(QMainWindow):
             response.raise_for_status()
             pixmap = QPixmap()
             pixmap.loadFromData(BytesIO(response.content).getvalue())
-            self.image_label.setPixmap(pixmap.scaled(600, 600, Qt.KeepAspectRatio))
+            self.image_label.setPixmap(pixmap.scaled(300, 300, Qt.KeepAspectRatio))
         except Exception as e:
             self.log_message(f"Image load error: {e}")
 
@@ -216,11 +216,11 @@ class MainWindow(QMainWindow):
         try:
             num_requests = int(self.requests_input.text())
         except ValueError:
-            QMessageBox.critical(self, "Fsociety", "¡El número de solicitudes debe ser un número entero!")
+            QMessageBox.critical(self, "F-Reality", "¡El número de solicitudes debe ser un número entero!")
             return
 
         if not target_url or num_requests <= 0:
-            QMessageBox.critical(self, "Fsociety", "¡Ingrese una URL válida y número de solicitudes!")
+            QMessageBox.critical(self, "F-Reality", "¡Ingrese una URL válida y número de solicitudes!")
             return
 
         self.log_message("Ataque DDoS iniciado. ¡El objetivo será aplastado!")
