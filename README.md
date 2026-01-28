@@ -12,7 +12,7 @@ sudo apt install  python3
 
 
 
-git clone https://github.com/Fsociety018/FsocietyDDoS.git
+git clone https://github.com/F-REALITY/F-RealityDDoS.git
  
 
 
