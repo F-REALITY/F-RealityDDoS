@@ -228,10 +228,11 @@ class MainWindow(QMainWindow):
         self.attack_thread = AttackThread(target_url, num_requests)
         self.attack_thread.log_signal.connect(self.log_message)
         self.attack_thread.start()
-        QMessageBox.information(self, "Fsociety", "¡El ataque ha comenzado! ¡Revisen los registros!")
+        QMessageBox.information(self, "F-Reality", "¡El ataque ha comenzado! ¡Revisen los registros!")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
+
